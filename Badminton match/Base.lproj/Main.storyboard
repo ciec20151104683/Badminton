@@ -82,7 +82,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="场地｀.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="wlV-XL-mRk">
-                                <rect key="frame" x="36" y="403" width="331" height="197"/>
+                                <rect key="frame" x="36" y="406" width="331" height="197"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dfX-HW-P2Y">
@@ -133,7 +133,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ABl-lk-eTr">
-                                <rect key="frame" x="208" y="533" width="97" height="30"/>
+                                <rect key="frame" x="228" y="542" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -147,7 +147,7 @@
                         <outlet property="Aleft" destination="6Vp-iq-N7K" id="P5i-oa-3et"/>
                         <outlet property="Aright" destination="Aq8-VF-CPf" id="ung-CR-GoF"/>
                         <outlet property="Bleft" destination="xAc-Zq-AAm" id="aZd-cx-gmY"/>
-                        <outlet property="Bright" destination="ABl-lk-eTr" id="lvX-vN-G0i"/>
+                        <outlet property="Bright" destination="ABl-lk-eTr" id="J6l-Gw-oZP"/>
                         <outlet property="game" destination="dfX-HW-P2Y" id="yB5-hO-7F8"/>
                         <outlet property="peopleA" destination="K4L-vo-BnJ" id="Hjj-2f-YRc"/>
                         <outlet property="peopleB" destination="3Mz-8K-vCc" id="H6Y-5r-NJg"/>

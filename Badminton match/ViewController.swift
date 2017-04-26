@@ -20,12 +20,12 @@ class ViewController: UIViewController,
     @IBOutlet weak var game: UITextField!
    
     @IBOutlet weak var Aleft: UITextField!
-   
-    @IBOutlet weak var Bleft: UITextField!
     @IBOutlet weak var Aright: UITextField!
-    @IBOutlet weak var peopleA: UIImageView!
+    @IBOutlet weak var Bleft: UITextField!
     @IBOutlet weak var Bright: UITextField!
-
+  
+    
+    @IBOutlet weak var peopleA: UIImageView!
     @IBOutlet weak var peopleB: UIImageView!
     var xa : Int = 0
     var xb : Int = 0
@@ -290,7 +290,7 @@ class ViewController: UIViewController,
         
     }
 
-
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
