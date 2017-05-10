@@ -41,23 +41,15 @@
                                 <rect key="frame" x="278" y="69" width="71" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="选手B图片"/>
-                                <connections>
-                                    <action selector="B:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kqv-qJ-Yrw"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Pt-QW-24b">
                                 <rect key="frame" x="161" y="36" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="开始"/>
+                                <connections>
+                                    <action selector="start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nCQ-sZ-n0F"/>
+                                </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="13.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="K4L-vo-BnJ">
-                                <rect key="frame" x="16" y="119" width="112" height="82"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="12.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="3Mz-8K-vCc">
-                                <rect key="frame" x="252" y="96" width="123" height="105"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qpa-wt-I63">
                                 <rect key="frame" x="265" y="271" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -82,7 +74,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="场地｀.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="wlV-XL-mRk">
-                                <rect key="frame" x="36" y="406" width="331" height="197"/>
+                                <rect key="frame" x="31" y="404" width="331" height="197"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dfX-HW-P2Y">
@@ -111,46 +103,71 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Vp-iq-N7K">
-                                <rect key="frame" x="84" y="430" width="97" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="13.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="JGx-z1-4W0">
+                                <rect key="frame" x="16" y="93" width="144" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="12.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="aeT-dW-4kX">
+                                <rect key="frame" x="228" y="93" width="147" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vH3-au-I7u">
+                                <rect key="frame" x="76" y="431" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aq8-VF-CPf">
-                                <rect key="frame" x="78" y="542" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xng-0Z-iEe">
+                                <rect key="frame" x="76" y="534" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xAc-Zq-AAm">
-                                <rect key="frame" x="228" y="430" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qVg-V4-nFp">
+                                <rect key="frame" x="221" y="431" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ABl-lk-eTr">
-                                <rect key="frame" x="228" y="542" width="97" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5J-8f-l4x">
+                                <rect key="frame" x="57" y="335" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="del"/>
+                                <connections>
+                                    <action selector="del:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kaW-rz-tzi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ld-1G-Ftr">
+                                <rect key="frame" x="208" y="335" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="fin"/>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="42T-wG-tJQ">
+                                <rect key="frame" x="221" y="541" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="final:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Rum-iP-sG5"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
-                        <outlet property="A" destination="8Bt-x3-2GE" id="nbi-ES-ShE"/>
-                        <outlet property="Aleft" destination="6Vp-iq-N7K" id="P5i-oa-3et"/>
-                        <outlet property="Aright" destination="Aq8-VF-CPf" id="ung-CR-GoF"/>
-                        <outlet property="Bleft" destination="xAc-Zq-AAm" id="aZd-cx-gmY"/>
-                        <outlet property="Bright" destination="ABl-lk-eTr" id="J6l-Gw-oZP"/>
+                        <outlet property="A" destination="8Bt-x3-2GE" id="22O-yb-cd7"/>
+                        <outlet property="Aleft" destination="vH3-au-I7u" id="vf4-7P-fWa"/>
+                        <outlet property="Aright" destination="xng-0Z-iEe" id="BxR-nE-K4o"/>
+                        <outlet property="B" destination="aeT-dW-4kX" id="IYP-r0-J1D"/>
+                        <outlet property="Bleft" destination="qVg-V4-nFp" id="fBs-wn-AWg"/>
+                        <outlet property="Bright" destination="42T-wG-tJQ" id="Qew-Mc-qV3"/>
                         <outlet property="game" destination="dfX-HW-P2Y" id="yB5-hO-7F8"/>
-                        <outlet property="peopleA" destination="K4L-vo-BnJ" id="Hjj-2f-YRc"/>
-                        <outlet property="peopleB" destination="3Mz-8K-vCc" id="H6Y-5r-NJg"/>
+                        <outlet property="peopleA" destination="JGx-z1-4W0" id="TJo-Lc-qky"/>
+                        <outlet property="peopleB" destination="aeT-dW-4kX" id="2mH-jb-7vC"/>
                         <outlet property="start" destination="HpU-j3-k8F" id="HeR-aS-O9L"/>
                         <outlet property="vs" destination="TFw-4R-xIh" id="Rtx-Oi-Ed0"/>
                         <outlet property="x" destination="5Cb-l0-vrM" id="fVZ-Px-qpE"/>
@@ -159,7 +176,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2276" y="-237"/>
+            <point key="canvasLocation" x="-4021.5999999999999" y="-228.03598200899552"/>
         </scene>
     </scenes>
     <resources>
