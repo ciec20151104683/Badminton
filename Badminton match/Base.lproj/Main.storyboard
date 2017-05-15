@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Cb-l0-vrM">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Cb-l0-vrM">
                                 <rect key="frame" x="16" y="271" width="97" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="97" id="OlC-5f-sJ8"/>
@@ -37,11 +38,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="spU-S3-RV5">
-                                <rect key="frame" x="278" y="69" width="71" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="选手B图片"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Pt-QW-24b">
                                 <rect key="frame" x="161" y="36" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -50,16 +46,14 @@
                                     <action selector="start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nCQ-sZ-n0F"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qpa-wt-I63">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qpa-wt-I63">
                                 <rect key="frame" x="265" y="271" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWa-08-n6i">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWa-08-n6i">
                                 <rect key="frame" x="21" y="220" width="72" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="选手A得分"/>
                                 <connections>
                                     <action selector="markA:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EPQ-Pt-sby"/>
@@ -77,9 +71,8 @@
                                 <rect key="frame" x="31" y="404" width="331" height="197"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dfX-HW-P2Y">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dfX-HW-P2Y">
                                 <rect key="frame" x="139" y="271" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -95,6 +88,9 @@
                                 <rect key="frame" x="36" y="69" width="72" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="选手A图片"/>
+                                <connections>
+                                    <action selector="A:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5VP-kF-D5m"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HpU-j3-k8F">
                                 <rect key="frame" x="151" y="220" width="60" height="30"/>
@@ -103,14 +99,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="13.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="JGx-z1-4W0">
-                                <rect key="frame" x="16" y="93" width="144" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="12.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="aeT-dW-4kX">
-                                <rect key="frame" x="228" y="93" width="147" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vH3-au-I7u">
                                 <rect key="frame" x="76" y="431" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -132,9 +120,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5J-8f-l4x">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5J-8f-l4x">
                                 <rect key="frame" x="57" y="335" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="del"/>
                                 <connections>
                                     <action selector="del:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kaW-rz-tzi"/>
@@ -155,19 +142,42 @@
                                     <action selector="final:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Rum-iP-sG5"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rc4-4d-lGh">
+                                <rect key="frame" x="272" y="72" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="选手B图片"/>
+                                <connections>
+                                    <action selector="B:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FIj-B2-Tnn"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qRL-3U-fWX">
+                                <rect key="frame" x="16" y="107" width="127" height="105"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="40T-ER-c6M">
+                                <rect key="frame" x="236" y="107" width="126" height="105"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5Cb-l0-vrM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="58q-wE-LPY"/>
+                            <constraint firstItem="5Cb-l0-vrM" firstAttribute="top" secondItem="oWa-08-n6i" secondAttribute="bottom" constant="21" id="7X5-D1-eph"/>
+                            <constraint firstItem="5Cb-l0-vrM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="271" id="T4u-db-g6P"/>
+                            <constraint firstItem="P5J-8f-l4x" firstAttribute="top" secondItem="5Cb-l0-vrM" secondAttribute="bottom" constant="34" id="Tnw-g3-pxf"/>
+                            <constraint firstItem="dfX-HW-P2Y" firstAttribute="leading" secondItem="5Cb-l0-vrM" secondAttribute="trailing" constant="26" id="YfE-1v-giL"/>
+                            <constraint firstItem="5Cb-l0-vrM" firstAttribute="baseline" secondItem="qpa-wt-I63" secondAttribute="baseline" id="na0-Nl-SFn"/>
+                            <constraint firstItem="5Cb-l0-vrM" firstAttribute="leading" secondItem="qRL-3U-fWX" secondAttribute="leading" id="q7N-bu-4rg"/>
+                            <constraint firstItem="5Cb-l0-vrM" firstAttribute="baseline" secondItem="dfX-HW-P2Y" secondAttribute="baseline" id="y8N-8f-ls1"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="A" destination="8Bt-x3-2GE" id="22O-yb-cd7"/>
                         <outlet property="Aleft" destination="vH3-au-I7u" id="vf4-7P-fWa"/>
                         <outlet property="Aright" destination="xng-0Z-iEe" id="BxR-nE-K4o"/>
-                        <outlet property="B" destination="aeT-dW-4kX" id="IYP-r0-J1D"/>
                         <outlet property="Bleft" destination="qVg-V4-nFp" id="fBs-wn-AWg"/>
                         <outlet property="Bright" destination="42T-wG-tJQ" id="Qew-Mc-qV3"/>
                         <outlet property="game" destination="dfX-HW-P2Y" id="yB5-hO-7F8"/>
-                        <outlet property="peopleA" destination="JGx-z1-4W0" id="TJo-Lc-qky"/>
-                        <outlet property="peopleB" destination="aeT-dW-4kX" id="2mH-jb-7vC"/>
+                        <outlet property="peopleA" destination="qRL-3U-fWX" id="vxk-O3-z59"/>
+                        <outlet property="peopleB" destination="40T-ER-c6M" id="MeL-dH-Sqc"/>
                         <outlet property="start" destination="HpU-j3-k8F" id="HeR-aS-O9L"/>
                         <outlet property="vs" destination="TFw-4R-xIh" id="Rtx-Oi-Ed0"/>
                         <outlet property="x" destination="5Cb-l0-vrM" id="fVZ-Px-qpE"/>
@@ -176,12 +186,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4021.5999999999999" y="-228.03598200899552"/>
+            <point key="canvasLocation" x="-4038" y="-306"/>
         </scene>
     </scenes>
     <resources>
-        <image name="12.jpg" width="225" height="300"/>
-        <image name="13.jpg" width="200" height="200"/>
         <image name="场地｀.jpg" width="236" height="500"/>
     </resources>
 </document>

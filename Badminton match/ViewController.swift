@@ -13,13 +13,13 @@ class ViewController: UIViewController,
     UINavigationControllerDelegate{
     
     
+    @IBOutlet weak var peopleB: UIImageView!
+    @IBOutlet weak var peopleA: UIImageView!
     @IBOutlet weak var x: UITextField!
     @IBOutlet weak var y: UITextField!
     @IBOutlet weak var vs: UITextField!
     @IBOutlet weak var start: UITextField!
     @IBOutlet weak var game: UITextField!
-    @IBOutlet weak var peopleA: UIImageView!
-    @IBOutlet weak var peopleB: UIImageView!
     @IBOutlet weak var Aleft: UITextField!
     @IBOutlet weak var Aright: UITextField!
     @IBOutlet weak var Bleft: UITextField!
@@ -31,12 +31,40 @@ class ViewController: UIViewController,
     var dlg=0
     var del=0
     var s:String="Aleft"
-    @IBOutlet weak var A: UIButton!
-    @IBOutlet weak var B: UIImageView!
-    
-  
-    
-   
+ 
+
+
+    @IBAction func A(_ sender: Any) {
+        if dlg==0{
+            flagA=1
+            flagB=0
+            if UIImagePickerController.isSourceTypeAvailable(.photoLibrary)//初始化图片控制器
+            {
+                let picker = UIImagePickerController()//设置代理
+                picker.delegate = self  //设定图片控制器类型
+                picker.sourceType = UIImagePickerControllerSourceType.photoLibrary  //弹出控制器，显示界面
+                self.present(picker, animated: true, completion: {() ->Void in})
+            }else{
+                print("读取相册错误")
+            }
+        }
+    }
+    @IBAction func B(_ sender: Any) {
+        if dlg==0{
+            flagA=0
+            flagB=1
+            if UIImagePickerController.isSourceTypeAvailable(.photoLibrary)//初始化图片控制器
+            {
+                let picker = UIImagePickerController()//设置代理
+                picker.delegate = self  //设定图片控制器类型
+                picker.sourceType = UIImagePickerControllerSourceType.photoLibrary  //弹出控制器，显示界面
+                self.present(picker, animated: true, completion: {() ->Void in})
+            }else{
+                print("读取相册错误")
+            }
+        }
+
+    }
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController,didFinishPickingMediaWithInfo
         info:[String : Any]) {
         //查看info对象
@@ -45,7 +73,7 @@ class ViewController: UIViewController,
         let image:UIImage
         //获取选择的原图
         image = info[UIImagePickerControllerOriginalImage]as!
-            UIImage
+        UIImage
         if(flagA==1){
             peopleA.image = image
         }
@@ -54,7 +82,11 @@ class ViewController: UIViewController,
         }
         //图片控制器退出
         picker.dismiss(animated: true, completion: {() -> Void in})
-        }
+    }
+    
+    
+    
+ 
     
     @IBAction func markA(_ sender: Any) {
         if dlg==1{
