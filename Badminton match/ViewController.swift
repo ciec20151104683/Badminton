@@ -24,13 +24,19 @@ class ViewController: UIViewController,
     @IBOutlet weak var Aright: UITextField!
     @IBOutlet weak var Bleft: UITextField!
     @IBOutlet weak var Bright: UITextField!
-    var xa : Int = 0
-    var xb : Int = 0
+    @IBOutlet weak var Aall: UITextField!
+    @IBOutlet weak var Ball: UITextField!
+    
+    var xa:Int = 0
+    var xb:Int = 0
+    var xaa:Int = 0
+    var xbb:Int = 0
+    var dlg=0
     var flagA=0
     var flagB=0
-    var dlg=0
     var del=0
-    var s:String="Aleft"
+    var aa = 0
+    var bb = 0
  
 
 
@@ -65,23 +71,18 @@ class ViewController: UIViewController,
         }
 
     }
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController,didFinishPickingMediaWithInfo
-        info:[String : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         //查看info对象
-        print(info)
-        //显示的图片
-        let image:UIImage
+        print(info)//显示的照片
+        let image:UIImage!
         //获取选择的原图
-        image = info[UIImagePickerControllerOriginalImage]as!
-        UIImage
+        image = info[UIImagePickerControllerOriginalImage] as!UIImage
         if(flagA==1){
             peopleA.image = image
-        }
-        else if(flagB==1){
+        }else if(flagB==1){
             peopleB.image = image
-        }
-        //图片控制器退出
-        picker.dismiss(animated: true, completion: {() -> Void in})
+        }//
+        picker.dismiss(animated: true, completion: {() ->Void in})
     }
     
     
@@ -92,64 +93,92 @@ class ViewController: UIViewController,
         if dlg==1{
             del=1
             if game.text != "Game Over"{
-            x.textAlignment = .center
-            xa=xa+1;
-            if xa>=21{
-                let xaa=xa-2
-                if xaa >= xb{
-                    x.text="win"
-                    y.text="defeat"
-                    Bleft.text=" "
-                    Bright.text=" "
-                    Aleft.text=" "
-                    Aright.text=" "
-                    game.text="Game Over"
-                    
-                }
-                else{
-                    x.text="\(xa)"
-                    if xa%2 != 0{
-                        Aleft.text="\("发球")"
-                        Aright.text=" "
-                        Bleft.text=" "
-                        
-                        
-                    }else{
-                        Aleft.text=""
-                        Aright.text="\("发球")"
+                x.textAlignment = .center
+                xa=xa+1
+                if xa>=21{
+                    let xaa=xa-2
+                    if xaa >= xb{
+                        x.text="胜利"
+                        y.text="失败"
+                        aa = aa + 1
+                        Aall.text = "\(aa)"
+                        xa = 0
+                        xb = 0
                         Bleft.text=""
+                        Bright.text=""
+                        Aleft.text=""
+                        Aright.text=""
+                        if aa == 2{
+                            game.text="Game Over"
+                            xa = 0
+                            x.text = ""
+                            xb = 0
+                            y.text = ""
+                            
+                            
+                        }
+                        
                         
                     }
-                }
-            }
-            else {
-                if xa>xb{
-                    if xa==30{
-                        x.text="win"
-                        y.text="defeat"
-                        Bleft.text=""
-                        Aright.text=""
-                        Aright.text=""
-                        game.text="Game Over"
-                        
-                    }else {
-                        x.text="\(xa)"
-                        if xa%2 != 0{
-                            Aleft.text="\("发球")"
-                            
-                            Aright.text=""
-                            Bleft.text=""
-                            Bright.text=""
+                    else{
+                        if xa>xb{
+                            if xa==30{
+                                x.text="胜利"
+                                y.text="失败"
+                                aa = aa + 1
+                                Aall.text = "\(aa)"
+                                Bleft.text=""
+                                Bright.text=""
+                                Aleft.text=""
+                                Aright.text=""
+                                if aa == 2{
+                                    game.text="Game Over"
+                                    xa = 0
+                                    x.text = ""
+                                    xb = 0
+                                    y.text = ""
+                                    aa = 0
+                                    bb = 0
+                                    
+                                }
+                                
+                            }
+                            else{
+                                x.text="\(xa)"
+                                if xa%2 != 0{
+                                    Aleft.text="\("发球")"
+                                    Aright.text=""
+                                    Bleft.text=""
+                                    Bright.text=""
+                                }
+                                else{
+                                    Aleft.text=""
+                                    Aright.text="\("发球")"
+                                    Bleft.text=""
+                                    Bright.text=""
+                                    
+                                }
+                            }
                         }
                         else{
-                            Aleft.text=""
-                            
-                            Aright.text="\("发球")"
-                            Bleft.text=""
-                            Bright.text=""
+                            x.text="\(xa)"
+                            if xa%2 != 0{
+                                Aleft.text="\("发球")"
+                                Aright.text=""
+                                Bleft.text=""
+                                Bright.text=""
+                            }
+                            else{
+                                Aleft.text=""
+                                Aright.text="\("发球")"
+                                Bleft.text=""
+                                Bright.text=""
+                                
+                            }
                         }
                     }
                 }
+                
                 else {
                     x.text="\(xa)"
                     if xa%2 != 0{
@@ -160,124 +189,115 @@ class ViewController: UIViewController,
                     }
                     else{
                         Aleft.text=""
-                        
                         Aright.text="\("发球")"
                         Bleft.text=""
                         Bright.text=""
+                        
                     }
-                    
                 }
             }
         }
-            else{
-                x.text="\(xa)"
-                if xa%2 != 0{
-                    Aleft.text="\("发球")"
-                    Aright.text=""
-                    Bleft.text=""
-                    Bright.text=""
-                }
-                else{
-                    Aleft.text=""
-                    
-                    Aright.text="\("发球")"
-                    Bleft.text=""
-                    Bright.text=""
-                }
-
-            }
     }
-    
-}
     @IBAction func markB(_ sender: Any) {
         if dlg==1{
             del=2
             if game.text != "Game Over"{
                 y.textAlignment = .center
-                xb=xb+1;
+                xb=xb+1
                 if xb>=21{
                     let xbb=xb-2
                     if xbb >= xa{
-                        x.text="win"
-                        y.text="defeat"
+                        y.text="胜利"
+                        x.text="失败"
+                        bb = bb + 1
+                        Ball.text = "\(bb)"
+                        xa = 0
+                        xb = 0
                         Bleft.text=""
                         Bright.text=""
                         Aleft.text=""
                         Aright.text=""
-                        game.text="Game Over"
-                        
-                    }
-          
-                else {
-                    if xb>xa{
-                        if xa==30{
-                            x.text="win"
-                            y.text="defeat"
-                            Bleft.text=""
-                            Aright.text=""
-                            Aright.text=""
+                        if bb == 2{
                             game.text="Game Over"
-                            
-                        }else {
-                            x.text="\(xa)"
-                            if xa%2 != 0{
-                                Aleft.text="\("发球")"
-                                
-                                Aright.text=""
+                            xb = 0
+                            x.text = ""
+                            xb = 0
+                            y.text = ""
+                        }
+                    }
+                    else{
+                        if xb>xa{
+                            if xb==30{
+                                y.text="胜利"
+                                x.text="失败"
+                                bb = bb + 1
+                                Ball.text = "\(bb)"
                                 Bleft.text=""
+                                Bright.text=""
+                                Aleft.text=""
+                                Aright.text=""
+                                if bb == 2{
+                                    game.text="Game Over"
+                                    xb = 0
+                                    x.text = ""
+                                    xb = 0
+                                    y.text = ""
+                                    aa = 0
+                                    bb = 0
+                                }
+                            }
+                            else{
+                                y.text="\(xb)"
+                                if xb%2 != 0{
+                                    Aleft.text=""
+                                    Aright.text=""
+                                    Bleft.text="\("发球")"
+                                    Bright.text=""
+                                }
+                                else{
+                                    Aleft.text=""
+                                    Aright.text=""
+                                    Bleft.text=""
+                                    Bright.text="\("发球")"
+                                }
+                            }
+                        }
+                        else{
+                            y.text="\(xb)"
+                            if xb%2 != 0{
+                                Aleft.text=""
+                                Aright.text=""
+                                Bleft.text="\("发球")"
                                 Bright.text=""
                             }
                             else{
                                 Aleft.text=""
-                                
-                                Aright.text="\("发球")"
+                                Aright.text=""
                                 Bleft.text=""
-                                Bright.text=""
+                                Bright.text="\("发球")"
                             }
                         }
                     }
-                    else {
-                        x.text="\(xa)"
-                        if xa%2 != 0{
-                            Aleft.text="\("发球")"
-                            Aright.text=""
-                            Bleft.text=""
-                            Bright.text=""
-                        }
-                        else{
-                            Aleft.text=""
-                            
-                            Aright.text="\("发球")"
-                            Bleft.text=""
-                            Bright.text=""
-                        }
-                        
+                }
+                else {
+                    y.text="\(xb)"
+                    if xb%2 != 0{
+                        Aleft.text=""
+                        Aright.text=""
+                        Bleft.text="\("发球")"
+                        Bright.text=""
+                    }
+                    else{
+                        Aleft.text=""
+                        Aright.text=""
+                        Bleft.text=""
+                        Bright.text="\("发球")"
                     }
                 }
             }
-            else{
-                x.text="\(xa)"
-                if xa%2 != 0{
-                    Aleft.text="\("发球")"
-                    Aright.text=""
-                    Bleft.text=""
-                    Bright.text=""
-                }
-                else{
-                    Aleft.text=""
-                    
-                    Aright.text="\("发球")"
-                    Bleft.text=""
-                    Bright.text=""
-                }
-                
-            }
         }
-
         
     }
-
-}
     @IBAction func start(_ sender: Any) {
         if peopleA.image != nil && peopleB.image != nil {
             if dlg==0{
@@ -332,7 +352,7 @@ class ViewController: UIViewController,
             
         }
     }
-    @IBAction func del(_ sender: Any) {
+    @IBAction func delate(_ sender: Any) {
         if dlg==1{
             if game.text==""{
                 if del==1{
@@ -351,8 +371,10 @@ class ViewController: UIViewController,
                 }
             }
         }
+
     }
-    @IBAction func final(_ sender: Any) {
+
+    @IBAction func finish(_ sender: Any) {
         if dlg==1{
             if game.text=="Game Over"{
                 x.text=""
@@ -375,9 +397,10 @@ class ViewController: UIViewController,
             }
         }
     }
-   
-    
 }
+    
+    
+    
 
 
 
